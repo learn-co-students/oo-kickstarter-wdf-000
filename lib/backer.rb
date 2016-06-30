@@ -10,10 +10,7 @@ class Backer
 	def back_project(project_name)
 		Project.new(project_name)
 		@backed_projects << project_name
-		# binding.pry
-
 		self.backed_projects.each { |project| project.backers << self }
-		# add_backer(name)
 	end
 
 
